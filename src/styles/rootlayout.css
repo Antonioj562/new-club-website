@@ -1,0 +1,117 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700&display=swap');
+
+/* color variables */
+:root {
+    --green: #00ff6c;
+    --blue: #73c2fb;
+    --gray: #5a5a5a;
+    --dark-gray: #2f2f2f;
+    --red: #ca2440;
+}
+
+/* style resetting and general structure rules */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'PT Sans', sans-serif;
+}
+
+html {
+    overflow-x: hidden;
+    font-size: 16px;
+}
+
+section {
+    background-color: #fff;
+    height: 100vh;
+    width: 100vw;
+    padding: 0 5%;
+    margin: auto;
+}
+
+@media screen and (min-width: 1920px) {
+    html {
+        font-size: 20px;
+    }
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    
+}
+
+/* Navbar container */
+.navbar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navbar list */
+.navbar {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 0;
+    top: 0;
+    list-style: none;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    transform: translate(-70%);
+}
+
+/* Navbar items */
+.navbar-item {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Navbar links */
+.navbar-link {
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+    color: #00ffcc; /* teal hover color */
+}
+
+/* Mobile hamburger */
+.hamburger-menu-container {
+    display: none; /* hidden on desktop */
+}
+
+/* Responsive nav */
+@media (max-width: 768px) {
+    .navbar {
+        display: none; /* hide regular nav */
+    }
+
+    .hamburger-menu-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 25px;
+        height: 20px;
+        cursor: pointer;
+    }
+
+    .hamburger-menu-line {
+            width: 100%;
+            height: 3px;
+            background: #fff;
+        }
+}
+
