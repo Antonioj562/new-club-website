@@ -4,7 +4,7 @@ import './styles/main.css'
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import RootLayout from "./layouts/RootLayout.tsx"
+import RootLayout from "./layouts/Navbar.tsx"
 import { Contact } from "./pages/Contact.tsx"
 import { EBoard } from "./pages/E_Board.tsx"
 import { Events } from "./pages/Events.tsx"
