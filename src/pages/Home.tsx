@@ -47,52 +47,7 @@ export const Home = () => {
                 </div>
             </section>
             
-            {/* Events section */}
-            <section id='events'>
-                <div className='events-mobile-background events-mobile-background-inactive'></div>
-                <div className='events-title-container'>
-                <h1 className='events-title'>EVENTS</h1>
-                </div>
-                <p className='events-semester'>Semester: Fall 2020</p>
-                {/* ...existing code for events... */}
-                {/* Main desktop grid */}
-                <div className='events-grid'>
-                <div className='events-title-container'>
-                    <h1 className='events-title'>EVENTS</h1>
-                </div>
-                {/* ...existing code for event items... */}
-                <div className='events-grid-spacer'></div>
-                <div className='events-right-line'></div>
-                </div>
-        <img src={'/src/assets/old.jpg'} alt='' className='events-picture' id='events-picture-1' />
-        <img src={'/src/assets/icpc.jpg'} alt='' className='events-picture' id='events-picture-2' />
-            </section>
-            {/* Projects section */}
-            <section id='projects'>
-                <div className='projects-title-container'><h1 className='projects-title'>PROJECTS</h1></div>
-                {/* ...existing code for projects... */}
-                <div className='projects-banner-container'>
-                <div className='projects-circle-border-container'>
-                    <div className='project-border'></div>
-                    <div className='circle'></div>
-                </div>
-                <div className='projects-circle-border-container' id='last'>
-                    <div className='project-border'></div>
-                    <div className='circle'></div>
-                </div>
-                <div className='decoration-circle-container'>
-                    <div className='second-border-width'></div>
-                    <div className='second-border-length'></div>
-                    <div className='circle decoration-circle size-large' id='circle-1'></div>
-                    <div className='circle decoration-circle' id='circle-2'></div>
-                    <div className='circle decoration-circle size-medium' id='circle-3'></div>
-                    <div className='circle decoration-circle size-medium' id='circle-4'></div>
-                    <div className='circle decoration-circle size-small' id='circle-5'></div>
-                    <div className='circle decoration-circle size-small' id='circle-6'></div>
-                    <img className='projects-banner' src={'/src/assets/11377175_10203435304518305_4965010383617393659_n.jpg'} alt='Project Banner' />
-                </div>
-                </div>
-            </section>
+            
             {/* Footer */}
             <footer id='contact-us'>
                 <div className='footer-container'>
@@ -109,19 +64,19 @@ export const Home = () => {
                     <div className='css-socials'>
                     <ul>
                         <li>STAY IN THE LOOP</li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li>cppcss</li>
+                        <li>cppcss</li>
+                        <li>Cal Poly Pomona - Computer Science Society</li>
                         <li></li>
                     </ul>
                     </div>
                     <div className='footer-nav-links'>
                     <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li>HOME</li>
+                        <li>ABOUT</li>
+                        <li>E-BOARD</li>
+                        <li>EVENTS</li>
+                        <li>PROJECTS</li>
                     </ul>
                     </div>
                 </div>

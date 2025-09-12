@@ -1,4 +1,4 @@
-
+import '../styles/e-board.css'
 
 export const EBoard = () => {
     return (

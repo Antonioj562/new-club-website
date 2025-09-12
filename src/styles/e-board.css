@@ -1,0 +1,112 @@
+ /* e-board section rules */
+    #e-board {
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        height: 100vh;
+    }    
+
+    #e-board img {
+        display: initial;
+    }
+
+    /* left red line in e-board section */
+    #e-board::before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 5px;
+        left: 4.9%;
+        background-color: var(--red);
+        height: 100vh;
+    }
+
+    .e-board-section-container {
+        padding: 8rem 0;
+        align-self: flex-start;
+        display: flex;
+        flex-flow: column nowrap;
+        margin-left: 3rem;
+        order: initial;
+    }
+
+    .mobile-e-board-title {
+        display: none;
+    }
+
+    .desktop-e-board-title {
+        display: initial;
+        font-size: 2.5rem;
+        margin-top: none;
+    }
+
+    .officer-title {
+        text-align: left;
+    }
+
+    .e-board-description-carousel {
+        padding-left: none;
+    }
+
+    .e-board-description {
+        margin-top: 3rem;
+        width: 35vw;
+    }
+
+    #prathista,
+    #ketan {
+        font-size: 1rem;
+    }
+
+    .e-board-gallery-container {
+        display: flex;
+        flex-flow: column nowrap;
+        order: initial;
+    }
+
+    .e-board-gallery {
+        margin-left: 5vw;
+        height: auto;
+    }
+
+    .e-board-picture {
+        object-fit: cover;
+        width: 20rem;
+        height: 25rem;
+        margin: 0 0.1rem;
+        border-radius: 0%;
+        position: unset;
+    }
+
+    .e-board-picture-active {
+        transform: scale(1);
+    }
+
+    .e-board-picture-inactive {
+        transform: scale(0.75);
+        opacity: 0.3;
+    }
+
+    .e-board-gallery-counter {
+        text-align: center;
+        margin-right: 2vw;
+    }
+
+    .e-board-gallery-controls-container {
+        align-self: flex-start;
+        margin-left: 6vw;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+    }
+
+    .e-board-gallery-controls {
+        max-height: 2.5rem;
+        margin: 1rem 4rem;
+        cursor: pointer;
+        transition: transform 0.25s ease-in-out;
+    }
+
+    .e-board-gallery-controls:hover {
+        transform: scale(1.75);
+    }
