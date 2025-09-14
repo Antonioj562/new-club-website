@@ -1,5 +1,3 @@
-
-
 header {
     position: relative;
     width: 100%;
@@ -67,6 +65,482 @@ header::before {
     to {
         opacity: 1;
         transform: scale(1);
-  }
+    }
 }
 
+
+/* about section rules */
+#about {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    text-align: center;
+}
+
+.about-title {
+    font-size: 2rem;
+    color: var(--blue);
+}
+
+.about-blue-line {
+    display: none;
+}
+
+.about-computer {
+    max-width: 20rem;
+    order: 3;
+}
+
+.about-desc-wrapper {
+    box-shadow: 0 0 5px 4px #cecece;
+    width: 90%;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    padding: 1rem;
+    z-index: 1;
+}
+
+/* mission section rules */
+#mission {
+    height: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.mission-title {
+    letter-spacing: 0.25rem;
+    font-size: 2rem;
+}
+
+.mission-card {
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    margin: 8rem 0;
+    border: 1px solid #ccc;
+    position: relative;
+    padding: 1rem;
+    padding-top: 25%;
+}
+
+.mission-card > * {
+    margin-bottom: 2rem;
+}
+
+.mission-card-title {
+    font-size: 1.5rem;
+    border-bottom: 1px solid var(--dark-gray);
+    padding: 0.25rem 1.5rem;
+    margin: 0 auto 2rem auto;
+    order: 2;
+}
+
+.mission-card-description {
+    text-align: left;
+    order: 3;
+}
+
+.mission-card-image {
+    max-height: 10rem;
+    order: 1;
+    position: absolute;
+    top: -20%;
+    left: 30%;
+}
+
+/* this image requires different rules to align with the other mission images */
+.first-mission-card-image {
+    left: 25%;
+}.mobile-logo {
+    display: block;
+    max-height: 3rem;
+    margin: 1rem 0;
+}
+
+.inner {
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    justify-content: flex-start;
+    padding: 0 1rem 2rem 0;
+    width: 85%;
+}
+
+.inner p {
+    font-size: 0.75rem;
+    margin: 1rem 0;
+}
+
+/* add blur to website title */
+.inner h1 {
+    text-shadow: 1px 1px 2px #90d0ee;
+    font-size: 3rem;
+    margin: 1rem 0;
+}
+
+.inner h5 {
+    font-size: 1.1rem;
+    letter-spacing: 0.2rem;
+    margin-bottom: 3rem;
+}
+
+@media only screen and (min-width: 768px) {
+/* footer rules */
+    .footer-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 3rem;
+        justify-content:center;
+        align-content: center;
+        margin: 0 auto;
+        padding: 4rem;
+    }
+
+    .logo-stuff {
+        width: 90%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .footer-outline {
+        background-color: rgba(255,255,255,0.4);
+        width: 100%;
+        height: 2px;
+    }
+
+    .comp-sci-logo {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        max-width: 500px;
+        justify-content: center;
+        flex-shrink: 0;
+        padding: 0 1rem; 
+    }
+
+    .social-stuff {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-container li {
+        margin-bottom: 0.75rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .email-container {
+        order: unset;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    #email-input {
+        padding: 0.25rem 0;
+        background-color: #222;
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+        color: white;
+        font-size: 1rem;
+    }
+
+    #email-submit {
+        /* invisible submit button so users can press enter to submit after inputting their email */
+        position: absolute;
+        left: -9999px;
+    }
+
+    .email-form {
+        margin-top: 4rem;
+        display: initial;
+    }
+
+    .css-socials {
+        order: unset;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+
+    .css-socials li {
+        flex-flow: row nowrap;
+        text-align: left;
+    }
+
+    .css-socials img {
+        max-height: 2.4rem;
+        fill: white;
+        margin-right: 1.5rem;
+        filter: drop-shadow(none);
+        /* transition for white neon effect on icon hover effect */
+        transition: filter 0.15s ease-in;           
+    }
+
+    .css-socials img:hover {
+        filter: drop-shadow(0px 0px 3px #bbb);
+    }
+
+    .footer-nav-links {
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-nav-links ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-nav-links li {
+        margin: 0 0.5rem;
+    }
+
+    .navbar-link {
+        font-weight: bold;
+        color: #222;
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+    .navbar-link:hover {
+        color: #438e66;
+        text-decoration: underline;
+    }
+
+    .top-button {
+        display: block;
+        margin: 2rem auto 0 auto;
+        padding: 0.5rem 1.5rem;
+        background: #438e66;
+        color: #fff;
+        border-radius: 2rem;
+        text-align: center;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1rem;
+        transition: background 0.2s;
+    }
+
+    .top-button:hover {
+        background: #222;
+    }
+
+    .decoration-circle-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+
+    .circle.decoration-circle {
+        border-radius: 50%;
+        background: #438e66;
+        opacity: 0.7;
+    }
+
+    .size-medium {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .size-small {
+        width: 1rem;
+        height: 1rem;
+    }
+
+    /* hide mobile footer elements */
+    footer .decoration-circle-container,
+    .mobile-footer-banner,
+    .top-button {
+        display: none;
+    }
+
+    #copyright {
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 0.75rem;
+        color: #aaa;
+        margin: auto 4rem;
+        padding: 2rem 0;
+        position: initial;
+    }
+}
+
+/* set different root font size for large resolutions */
+@media only screen and (min-width: 1920px) {
+    html {
+        font-size: 22px;
+    }
+}
+
+/* Footer styles */
+.footer-container {
+    margin-top: 3rem;
+    display: flex;
+    flex-flow:row nowrap;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    color: white
+}
+
+.logo-stuff {
+    width: 90%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.comp-sci-logo {
+    width: 100%;
+    max-width: 300px;
+    min-width: 150px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 0 1rem;
+}
+
+.social-stuff {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.footer-container li {
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+}
+
+.email-container {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 0 75px;
+}
+
+.css-socials {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    color: white;
+}
+
+.css-socials li {
+    flex-flow: row nowrap;
+    text-align: left;
+}
+
+.css-socials img {
+    max-height: 2.4rem;
+    margin-right: 1.5rem;
+    filter: drop-shadow(none);
+    transition: filter 0.15s ease-in;
+}
+
+.css-socials img:hover {
+    filter: drop-shadow(0px 0px 3px #bbb);
+}
+
+.footer-nav-links {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-nav-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav-links li {
+    margin: 0 0.5rem;
+}
+
+.navbar-link {
+    font-weight: bold;
+    color: #222;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.navbar-link:hover {
+    color: #438e66;
+    text-decoration: underline;
+}
+
+.top-button {
+    display: block;
+    margin: 2rem auto 0 auto;
+    padding: 0.5rem 1.5rem;
+    background: #438e66;
+    color: #fff;
+    border-radius: 2rem;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background 0.2s;
+}
+
+.top-button:hover {
+    background: #222;
+}
+
+.decoration-circle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.circle.decoration-circle {
+    border-radius: 50%;
+    background: #438e66;
+    opacity: 0.7;
+}
+
+.size-medium {
+    width: 2rem;
+    height: 2rem;
+}
+
+.size-small {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+        padding: 2rem;
+    }
+    .social-stuff {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .logo-stuff {
+        justify-content: center;
+    }
+}    

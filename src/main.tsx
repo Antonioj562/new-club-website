@@ -4,7 +4,7 @@ import './styles/main.css'
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import RootLayout from "./layouts/Navbar.tsx"
+import Navbar from "./layouts/Navbar.tsx"
 import { Contact } from "./pages/Contact.tsx"
 import { EBoard } from "./pages/E_Board.tsx"
 import { Events } from "./pages/Events.tsx"
@@ -13,7 +13,7 @@ import { Home } from "./pages/Home.tsx"
 
 const router = createBrowserRouter([
   {
-    element: <RootLayout />,
+    element: <Navbar />,
     children: [
       { path: "/", element: <Home /> },
       { path: "/e-board", element: <EBoard /> },

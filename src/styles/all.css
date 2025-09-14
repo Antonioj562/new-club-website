@@ -124,43 +124,6 @@
     color: var(--dark-gray);
 }
 
-
-/* REMOVE THIS WHEN THE BRONCO HACKS 2025 IS OVER*/
-/* JUSTIN DOESN'T LIKE THIS HE THINKS IT DOESN'T MATCH WITH THE PAGE */
-/* .broncohacks2025-glazing {
-    position: absolute;
-    height: 40%;
-    width: 25%;
-    top: 55%;
-    transform: rotate(20deg) translateX(-20%);
-    transition: transform 0.5s ease-in-out;
-}
-
-.look-here, .bronohacks-poster, .link-to-broncohacks2025 {
-    position: absolute;
-}
-
-.look-here {
-    width: 120%;
-    height: 120%;
-    top: -10%;
-    left: -10%;
-    z-index: 5;
-}
-
-.link-to-broncohacks2025 {
-    z-index: 10;
-}
-
-
-.broncohacks-poster {
-    height: auto;
-    width: 100%;
-    z-index: 2;
-} */
-
-
-
 /* scroll indicator at bottom of screen */
 @keyframes scrollIndicatorLoop {
     from {

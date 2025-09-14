@@ -1,91 +1,54 @@
 import { Outlet, Link } from "react-router-dom";
-import '../styles/all.css'
-/* */
+import { useState } from "react";
+import { CgClose } from "react-icons/cg";
 import '../styles/navbar.css'
-export default function RootLayout(){
+
+export default function Navbar(){
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
     return (
         <div className="root-layout-container">
-            {/* Top horizontal navigation bar */}
-            <nav className='header'>
-                {/* Mobile hamburger menu */}
-                <div className='hamburger-menu-container'>
-                <div className='hamburger-menu-line'></div>
-                <div className='hamburger-menu-line'></div>
+        {/* Top horizontal navigation bar */}
+        <nav className="header">
+            {/* Mobile hamburger menu */}
+            <div
+                className="main-hamburger-menu-container"
+                onClick={() => setIsMenuOpen(true)}
+            >
+                <div className="hamburger-menu-line"></div>
+                <div className="hamburger-menu-line"></div>
+            </div>
+
+            {/* Navigation container */}
+            <div className={isMenuOpen ? "main-navbar-container-active" : "main-navbar-container"}>
+            {/* Exit button (mobile) */}
+                <div
+                    className="main-navigation-menu-exit-wrapper"
+                    onClick={() => setIsMenuOpen(false)}
+                >
+                <CgClose className="main-navigation-menu-exit-icon" />
                 </div>
-                {/* Container for the actual navigation bar */}
-                <div className='navbar-container'>
-                {/* mobile button to exit navigation menu */}
-                <div className='navigation-menu-exit-wrapper'>
-                    <div className='navigation-menu-exit-line-1'></div>
-                    <div className='navigation-menu-exit-line-2'></div>
-                </div>
-                
-                <ul className='navbar'>
-                    <Link className='navbar-item' to='/e-board'>e-board</Link>
-                    <Link className='navbar-item' to='/'>home</Link>
-                    <Link className='navbar-item' to='/events'>events</Link>
-                    <Link className='navbar-item' to='/projects'>projects</Link>
-                    {/* <Link className='navbar-item' to='/alumni'>alumni</Link> */}
-                    <Link className='navbar-item' to='/contact'>contact us</Link>
+
+                    <div className="main-navigation-menu-exit-line-4"></div>                <ul className="main-navbar">
+                    <li className="main-navbar-item">
+                        <Link className="main-navbar-link" to="/e-board" onClick={() => setIsMenuOpen(false)}>E-Board</Link>
+                    </li>
+                    <li className="main-navbar-item">
+                        <Link className="main-navbar-link" to="/events" onClick={() => setIsMenuOpen(false)}>Events</Link>
+                    </li>
+                    <li className="main-navbar-item">
+                        <Link className="main-navbar-link" to="/" onClick={() => setIsMenuOpen(false)}>Home</Link>
+                    </li>
+                    <li className="main-navbar-item">
+                        <Link className="main-navbar-link" to="/projects" onClick={() => setIsMenuOpen(false)}>Projects</Link>
+                    </li>
+                    <li className="main-navbar-item">
+                        <Link className="main-navbar-link" to="/contact" onClick={() => setIsMenuOpen(false)}>Contact us</Link>
+                    </li>
                 </ul>
-                </div>
-            </nav>
-            <Outlet />
-        </div>
+            </div>
+        </nav>
+        <Outlet />
+    </div>
     )
 }
-
-
-
---------------------------------------------------------- -
-Look into converting this code
-
-<!-- Mobile hamburger menu -->
-    <div class='hamburger-menu-container'>
-        <div class='hamburger-menu-line'></div>
-        <div class='hamburger-menu-line'></div>
-    </div>
-    <!-- Container for the actual navigation bar -->
-    <div class='navbar-container'>
-        <!-- mobile button to exit navigation menu -->
-        <div class='navigation-menu-exit-wrapper'>
-            <div class='navigation-menu-exit-line-1'></div>
-            <div class='navigation-menu-exit-line-2'></div>
-        </div>
-        <ul class='navbar'>
-            <li class='navbar-item'>
-                <!-- Home page link -->
-                <a class='navbar-link smoothScroll' href='#top'>home</a>
-            </li>
-            <li class='navbar-item'>
-                <!-- About section link -->
-                <a class='navbar-link smoothScroll' href='#about'>about</a>
-            </li>
-            <li class='navbar-item'>
-                <!-- Mission link -->
-                <a class='navbar-link smoothScroll' href='#mission'>mission</a>
-            </li>
-            <li class='navbar-item'>
-                <!-- E-board link -->
-                <a class='navbar-link smoothScroll' href='#e-board'>e-board</a>
-            </li>
-            <li class='navbar-item'>
-                <!-- Events link -->
-                <a class='navbar-link smoothScroll' href='#events'>events</a>
-            </li>
-            <li class='navbar-item'>
-                <!-- Projects link -->
-                <a class='navbar-link smoothScroll' href='#projects'>projects</a>
-            </li>
-            <!-- 
-            <li class='navbar-item'>
-                <!- - Alumni link - ->
-                <a class='navbar-link smoothScroll' href='#alumni'>alumni</a>
-            </li>
-            -->
-            <li class='navbar-item'>
-                <!-- Contact us link -->
-                <a class='navbar-link smoothScroll' href='#contact-us'>contact us</a>
-            </li>
-        </ul>
-    </div>
