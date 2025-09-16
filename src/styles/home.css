@@ -428,7 +428,7 @@ footer .decoration-circle-container,
         max-height: 25rem;
         position: absolute;
         top: 15%;
-        left: -7%;
+        left: -5%;
 
         /* Start small */
         transform: scale(0.8);
@@ -650,21 +650,5 @@ footer .decoration-circle-container,
     .size-small {
         width: 1rem;
         height: 1rem;
-    }
-}
-
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-    .footer-container {
-        grid-template-columns: 1fr;
-        grid-gap: 2rem;
-        padding: 2rem;
-    }
-    .social-stuff {
-        flex-direction: column;
-        gap: 2rem;
-    }
-    .logo-stuff {
-        justify-content: center;
     }
 }
