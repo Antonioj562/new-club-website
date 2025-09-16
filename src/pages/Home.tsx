@@ -1,8 +1,34 @@
-import { Link } from 'react-router-dom'
+import { useEffect, useRef } from "react";
 
 import '../styles/home.css'
 
 export const Home = () => {
+    const imageRef = useRef<HTMLImageElement | null>(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            } else {
+                entry.target.classList.remove("visible"); // optional (if you want it to reset)
+            }
+            });
+        },
+        { threshold: 0.2 } // triggers when 20% of the image is visible
+        );
+
+        if (imageRef.current) {
+        observer.observe(imageRef.current);
+        }
+
+        return () => {
+        if (imageRef.current) {
+            observer.unobserve(imageRef.current);
+        }
+        };
+    }, []);
     return (
         <>
             {/* Home page */}
@@ -14,7 +40,7 @@ export const Home = () => {
             <section id='about'>
                 <h1 className='about-title'><span className='about-title-text'>Did you know</span><span className='about-question-mark'>?</span></h1>
                 <div className='about-blue-line'></div>
-                <img src={'/src/assets/cssgif.gif'} alt='computer with typing text animation gif' className='about-computer' />
+                <img ref={imageRef} src={'/src/assets/cssgif.gif'} alt='computer with typing text animation gif' className='about-computer' />
                 <div className='about-desc-wrapper'>
                     <p className='about-desc'>Computer Science Society is the oldest computer science organization at Cal Poly Pomona. We are one of the largest clubs that host events regularly and advise our members on the next path to success. Our motto is “Connect passion to empathy“.</p>
                 </div>

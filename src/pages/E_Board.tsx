@@ -1,79 +1,132 @@
-import '../styles/e-board.css'
+import { useState } from "react";
+import "../styles/e-board.css";
+
+const officers = [
+	{
+		name: "Jayden",
+		title: "President",
+		img: "/src/assets/jayden.jpg",
+		desc: "Hey everyone! I’m Jayden, a third-year Computer Science major. I’m passionate about becoming a full-stack developer because I love the process of creating complete applications from start to finish. Right now, I’m working on an exciting project called BroncoBond, a social media app designed to help guide students during their time at CPP. I’ll be leading CSS as president, and I’m really looking forward to meeting all of you at our socials!",
+	},
+	{
+		name: "Michael",
+		title: "Vice President",
+		img: "/src/assets/michael.jpg",
+		desc: "Hi! I'm Michael, a 3rd year here at CPP, majoring in CS. Although my interest lies mainly in software engineering, I’m currently working full-time as a software QA engineer. In my free time, I enjoy traveling, gaming, and playing bass (I’m not good lmao). If you ever see me on campus, feel free to say hi!",
+	},
+	{
+		name: "Brandon",
+		title: "Secretary",
+		img: "/src/assets/Brandon.png",
+		desc: "Hallo, I am Brandon, serving as your secretary! I am a 3rd year CS major interested in software/web development. Outside of CS, I enjoy taiko drumming, community work, and grinding The Finals. I also am a big fan of J-Rock, so please slide me recommendations! :D",
+	},
+	{
+		name: "Jade",
+		title: "Treasurer",
+		img: "/src/assets/Jade.jpeg",
+		desc: "What’s up everyone! I’m Jade and I’ll be your treasurer for this term. I’m a 4th year CS major interested in web/game development. Some things I enjoy are crocheting, pokemon tcg, and coca-cola. I look forward to meeting you all!",
+	},
+	{
+		name: "Julian",
+		title: "Historian",
+		img: "/src/assets/Julian.jpg",
+		desc: "Hello! I’m Julian, your historian for the 2025-26 school year. I’m a 3rd year CS major interested in software and web development. Some things I love include fashion, anime/manga, good coffee, and discovering new music. One fun fact about me is I’m secretly a dinosaur nerd ^_^",
+	},
+	{
+		name: "Allison",
+		title: "Mentorship Chair",
+		img: "/src/assets/Allison.JPG",
+		desc: "Hii, I’m Allison! I am a third-year student majoring in Computer Science. I am interested in software engineering and full-stack development. In my free time, I love snowboarding, playing tennis or pickleball, baking, and getting a good matcha. Don’t be a stranger and come say hi!",
+	},
+	{
+		name: "Caleb",
+		title: "Project Chair",
+		img: "/src/assets/caleb.JPG",
+		desc: "Hey guys! My name is Caleb Chung, I'm a 4th-year CS major at CPP, and I am this year's Project Chair. I am interested in and have fun working on full-stack web apps, specifically backend development. In my free time, I enjoy watching/playing basketball or just hanging out with friends in general, whether it be video games, golfing at the range, or just grabbing a drink and chatting. I'd love to meet more people, so please don't hesitate to say hi!",
+	},
+	{
+		name: "Tony",
+		title: "Events and Outreach Chair",
+		img: "/src/assets/tony.png",
+		desc: "Hello! My name is Tony Tong, I am a 4th-year CS major at CPP, and I am the Social Outreach and Event planner. I primarily focus on backend development; however, I also do offensive web hacking. In my free time, I like to loiter around and talk to people, so if ever you see me, feel free to say hi, either in person or online. I also play League of Legends, but I strive to one day not. Overall, I look forward to planning some fun events and getting to know everyone better!",
+	},
+	{
+		name: "Antonio",
+		title: "Webmaster",
+		img: "/src/assets/Antonio.jpeg",
+		desc: "Hello there! I'm Antonio, I'm a 4th year CS major at CPP and the webmaster for CSS. I enjoy working on web based projects but I recently found that I enjoy working on backend software more. In my free time I play video games like league of legends or Warhammer. I look forward to meeting more people and understanding their journey in CS!",
+	},
+];
 
 export const EBoard = () => {
-    return (
-        <div className="board-container">
-            {/* E-Board section */}
-            <section id='e-board'>
-                <h1 className='mobile-e-board-title'>MEET OUR E-BOARD</h1>
-                <div className='e-board-section-container'>
-                <h1 className='desktop-e-board-title'>MEET OUR E-BOARD</h1>
-                <div className='e-board-description-container'>
-                    <div className='e-board-description-carousel'>
-                    {/* Only active bios shown for brevity. Add more as needed. */}
-                    <div className='e-board-description e-board-description-active'>
-                        <h2 className='officer-title'>President</h2>
-                        <p id='Jayden'>Hey everyone! I’m Jayden, a third-year Computer Science major. I’m passionate about becoming a full-stack developer because I love the process of creating complete applications from start to finish. Right now, I’m working on an exciting project called BroncoBond, a social media app designed to help guide students during their time at CPP. I’ll be leading CSS as president, and I’m really looking forward to meeting all of you at our socials!</p>
-                    </div>
-                    <div className='e-board-description e-board-description-inactive'>
-                        <h2 className='officer-title'>Vice President</h2>
-                        <p id='michael'>Hi! I'm Michael, a 3rd year here at CPP, majoring in CS. Although my interest lies mainly in software engineering, I’m currently working full-time as a software QA engineer. In my free time, I enjoy traveling, gaming, and playing bass (I’m not good lmao). If you ever see me on campus, feel free to say hi!</p>
-                    </div>
-                    <div className='e-board-description e-board-description-inactive'>
-                        <h2 className='officer-title'>Secretary</h2>
-                        <p id='brandon'>Hallo, I am Brandon, serving as your secretary! I am a 3rd year CS major interested in software/web development. Outside of CS, I enjoy taiko drumming, community work, and grinding The Finals. I also am a big fan of J-Rock, so please slide me recommendations! :D</p>
-                    </div>
-                    <div className='e-board-description e-board-description-inactive'>
-                        <h2 className='officer-title'>Treasurer</h2>
-                        <p id='Jade'>What’s up everyone! I’m Jade and I’ll be your treasurer for this term. I’m a 4th year CS major interested in web/game development. Some things I enjoy are crocheting, pokemon tcg, and coca-cola. I look forward to meeting you all!</p>
-                    </div>
-                    <div className='e-board-description e-board-description-inactive'>
-                        <h2 className='officer-title'>Historian</h2>
-                        <p id='julian'></p>
-                    </div>
-                    <div className='e-board-description e-board-description-inactive'>
-                        <h2 className='officer-title'>Mentorship Chair</h2>
-                        <p id='allison'></p>
-                    </div>
-                    <div className='e-board-description e-board-description-inactive'>
-                        <h2 className='officer-title'>Project Chair</h2>
-                        <p id='caleb'></p>
-                    </div>
-                    <div className='e-board-description e-board-description-inactive'>
-                        <h2 className='officer-title'>Events and Outreach Chair</h2>
-                        <p id='tony'></p>
-                    </div>
-                    <div className='e-board-description e-board-description-inactive'>
-                        <h2 className='officer-title'>Webmaster</h2>
-                        <p id='antonio'></p>
-                    </div>
-                    </div>
-                </div>
-                </div>
-                {/* IMAGES */}
-                <div className='e-board-gallery-container'>
-                <div className='e-board-gallery'>
-                    <img src={'/src/assets/jayden.jpg'} alt='Jayden' className='e-board-picture e-board-picture-active' />
-                    <img src={'/src/assets/michael.jpg'} alt='Michael' className='e-board-picture e-board-picture-inactive' />
-                    <img src={'/src/assets/Brandon.png'} alt='Brandon' className='e-board-picture e-board-picture-inactive' />
-                    <img src={'/src/assets/Jade.jpeg'} alt='Jade' className='e-board-picture e-board-picture-inactive' />
-                    <img src={'/src/assets/Julian.jpg'} alt='Julian' className='e-board-picture e-board-picture-inactive' />
-                    <img src={'/src/assets/Allison.JPG'} alt='Allison' className='e-board-picture e-board-picture-inactive' />
-                    <img src={'/src/assets/caleb.JPG'} alt='Caleb' className='e-board-picture e-board-picture-inactive' />
-                    <img src={'/src/assets/tony.png'} alt='Tony' className='e-board-picture e-board-picture-inactive' />
-                    <img src={'/src/assets/Antonio.jpeg'} alt='Antonio' className='e-board-picture e-board-picture-inactive' />
-                </div>
-                <div className='e-board-gallery-controls-container'>
-                    <div className='e-board-gallery-button' id='e-board-gallery-left-button'>
-                    <img className='e-board-gallery-controls' src={'/src/assets/left arrow.svg'} alt='left arrow' />
-                    </div>
-                    <div className='e-board-gallery-button' id='e-board-gallery-right-button'>
-                    <img className='e-board-gallery-controls' src={'/src/assets/right arrow.svg'} alt='right arrow' />
-                    </div>
-                </div>
-                <p className='e-board-gallery-counter'>1 / 9</p>
-                </div>
-            </section>
-        </div>
-    );
+	const [index, setIndex] = useState(0);
+	const [hovered, setHovered] = useState<number | null>(null);
+
+	const nextSlide = () => {
+		if (index < officers.length - 3) setIndex(index + 3);
+	};
+
+	const prevSlide = () => {
+		if (index > 0) setIndex(index - 3);
+	};
+
+	return (
+		<section id="e-board">
+			<h1 className="desktop-e-board-title">MEET OUR E-BOARD</h1>
+			<div className="e-board-gallery-container">
+				<div className="e-board-gallery">
+					{officers.slice(index, index + 3).map((officer, i) => (
+						<div
+							key={i}
+							className="e-board-picture-wrapper"
+							onMouseEnter={() => setHovered(i)}
+							onMouseLeave={() => setHovered(null)}
+							style={{ position: "relative" }}
+						>
+							<img
+								src={officer.img}
+								alt={officer.name}
+								className="e-board-picture"
+							/>
+							{hovered === i && officer.desc && (
+								<div className="e-board-tooltip">
+									<h2 className="officer-title">{officer.title}</h2>
+                                    <h4 className="officer-name">{officer.name}</h4>
+									<p>{officer.desc}</p>
+								</div>
+							)}
+						</div>
+					))}
+				</div>
+				<div className="e-board-gallery-controls-container">
+					<button
+						onClick={prevSlide}
+						className="e-board-gallery-button"
+						disabled={index === 0}
+					>
+						<img
+							src={"/src/assets/left arrow.svg"}
+							alt="left arrow"
+							className="e-board-gallery-controls"
+						/>
+					</button>
+					<button
+						onClick={nextSlide}
+						className="e-board-gallery-button"
+						disabled={index >= officers.length - 3}
+					>
+						<img
+							src={"/src/assets/right arrow.svg"}
+							alt="right arrow"
+							className="e-board-gallery-controls"
+						/>
+					</button>
+				</div>
+				<p className="e-board-gallery-counter">
+					{index + 1} –{" "}
+					{Math.min(index + 3, officers.length)} / {officers.length}
+				</p>
+			</div>
+		</section>
+	);
 };

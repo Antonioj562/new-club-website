@@ -1,112 +1,70 @@
- /* e-board section rules */
-    #e-board {
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        align-items: center;
-        position: relative;
-        height: 100vh;
-    }    
+/* Section container */
+#e-board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+}
 
-    #e-board img {
-        display: initial;
-    }
+/* Title */
+.desktop-e-board-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
 
-    /* left red line in e-board section */
-    #e-board::before {
-        content: '';
-        display: block;
-        position: absolute;
-        width: 5px;
-        left: 4.9%;
-        background-color: var(--red);
-        height: 100vh;
-    }
+/* Gallery */
+.e-board-gallery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-    .e-board-section-container {
-        padding: 8rem 0;
-        align-self: flex-start;
-        display: flex;
-        flex-flow: column nowrap;
-        margin-left: 3rem;
-        order: initial;
-    }
+.e-board-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
 
-    .mobile-e-board-title {
-        display: none;
-    }
+.e-board-picture {
+    object-fit: cover;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
 
-    .desktop-e-board-title {
-        display: initial;
-        font-size: 2.5rem;
-        margin-top: none;
-    }
+.e-board-picture:hover {
+    transform: scale(1.1);
+}
 
-    .officer-title {
-        text-align: left;
-    }
+/* Controls */
+.e-board-gallery-controls-container {
+    display: flex;
+    gap: 2rem;
+    margin: 1rem 0;
+}
 
-    .e-board-description-carousel {
-        padding-left: none;
-    }
+.e-board-gallery-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
 
-    .e-board-description {
-        margin-top: 3rem;
-        width: 35vw;
-    }
+.e-board-gallery-controls {
+    width: 2.5rem;
+    height: 2.5rem;
+    transition: transform 0.25s ease-in-out;
+}
 
-    #prathista,
-    #ketan {
-        font-size: 1rem;
-    }
+.e-board-gallery-controls:hover {
+    transform: scale(1.2);
+}
 
-    .e-board-gallery-container {
-        display: flex;
-        flex-flow: column nowrap;
-        order: initial;
-    }
-
-    .e-board-gallery {
-        margin-left: 5vw;
-        height: auto;
-    }
-
-    .e-board-picture {
-        object-fit: cover;
-        width: 20rem;
-        height: 25rem;
-        margin: 0 0.1rem;
-        border-radius: 0%;
-        position: unset;
-    }
-
-    .e-board-picture-active {
-        transform: scale(1);
-    }
-
-    .e-board-picture-inactive {
-        transform: scale(0.75);
-        opacity: 0.3;
-    }
-
-    .e-board-gallery-counter {
-        text-align: center;
-        margin-right: 2vw;
-    }
-
-    .e-board-gallery-controls-container {
-        align-self: flex-start;
-        margin-left: 6vw;
-        flex-flow: row nowrap;
-        justify-content: flex-start;
-    }
-
-    .e-board-gallery-controls {
-        max-height: 2.5rem;
-        margin: 1rem 4rem;
-        cursor: pointer;
-        transition: transform 0.25s ease-in-out;
-    }
-
-    .e-board-gallery-controls:hover {
-        transform: scale(1.75);
-    }
+/* Counter */
+.e-board-gallery-counter {
+    margin-top: 1rem;
+    font-size: 1rem;
+}
