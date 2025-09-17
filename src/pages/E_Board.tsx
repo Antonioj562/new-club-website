@@ -60,7 +60,7 @@ const officers = [
 
 export const EBoard = () => {
 	const [index, setIndex] = useState(0);
-	const [hovered, setHovered] = useState<number | null>(null);
+	const [view, setView] = useState<number | null>(null);
 
 	const nextSlide = () => {
 		if (index < officers.length - 3) setIndex(index + 3);
@@ -79,8 +79,7 @@ export const EBoard = () => {
 						<div
 							key={i}
 							className="e-board-picture-wrapper"
-							onMouseEnter={() => setHovered(i)}
-							onMouseLeave={() => setHovered(null)}
+							onClick={() => setView(i)}
 							style={{ position: "relative" }}
 						>
 							<img
@@ -88,7 +87,7 @@ export const EBoard = () => {
 								alt={officer.name}
 								className="e-board-picture"
 							/>
-							{hovered === i && officer.desc && (
+							{view === i && officer.desc && (
 								<div className="e-board-tooltip">
 									<h2 className="officer-title">{officer.title}</h2>
                                     <h4 className="officer-name">{officer.name}</h4>
