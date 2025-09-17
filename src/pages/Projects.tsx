@@ -1,3 +1,5 @@
+import '../styles/projects.css';
+
 export const Projects = () => {
     return (
         <section id='projects'>
@@ -55,7 +57,7 @@ export const Projects = () => {
                     </li>
                 </ul>
                 <div className='project-media-container'>
-                    <img src='images/broncobond.png' alt='Bronco Bond Application' className='project-media' />
+                    <img src='src/assets/broncobond.png' alt='Bronco Bond Application' className='project-media' />
                     <p className='project-caption'>User Interface design for Bronco Bond</p>
                 </div>
             </div>
@@ -130,7 +132,7 @@ export const Projects = () => {
                     </li>
                 </ul>
                 <div className='project-media-container'>
-                    <img src='images/broncoHacks2025.png' alt='BroncoHacks Static Site' className='project-media' />
+                    <img src='src/assets/broncoHacks2025.png' alt='BroncoHacks Static Site' className='project-media' />
                     <p className='project-caption'>Home page for the BroncoHacks Website</p>
                 </div>
             </div>
@@ -209,7 +211,7 @@ export const Projects = () => {
                     </li>
                 </ul>
                 <div className='project-media-container'>
-                    <img src='images/broncoHacksApplicationPortal2025.png' alt='Bronco Bond Application' className='project-media'/>
+                    <img src='src/assets/broncoHacksApplicationPortal2025.png' alt='Bronco Bond Application' className='project-media'/>
                     <p className='project-caption'>Home Page for the BroncoHacks Application Portal</p>
                 </div>
             </div>
@@ -251,7 +253,7 @@ export const Projects = () => {
                 </ul>
                 <div className='project-media-container'>
                     <video className='old-website-video' controls>
-                        <source src='videos/ML-project.mov' type='video/mp4'/>
+                        <source src='src/assets/videos/ML-project.mov' type='video/mp4'/>
                         Graphs and Results Produced by Machine Learning Models
                     </video>
                 </div>
@@ -328,15 +330,16 @@ export const Projects = () => {
                 <div className='decoration-circle-container'>
                     <div className='second-border-width'></div>
                     <div className='second-border-length'></div>
+                    <div className='circle decoration-circle size-small' id='circle-5'></div>
+                    <div className='circle decoration-circle size-medium' id='circle-4'></div>
                     <div className='circle decoration-circle size-large' id='circle-1'></div>
-                    <div className='circle decoration-circle' id='circle-2'></div>
-                    <div className='circle decoration-circle size-medium' id='circle-3'></div>
+                    
+
+
+                    <img className='projects-banner' src='src/assets/11377175_10203435304518305_4965010383617393659_n.jpg' alt='Project Banner'/>
+                    <div className='circle decoration-circle size-large' id='circle-1'></div>
                     <div className='circle decoration-circle size-medium' id='circle-4'></div>
                     <div className='circle decoration-circle size-small' id='circle-5'></div>
-                    <div className='circle decoration-circle size-small' id='circle-6'></div>
-
-
-                    <img className='projects-banner' src='images/11377175_10203435304518305_4965010383617393659_n.jpg' alt='Project Banner'/>
                 </div>
             </div>
             </section>

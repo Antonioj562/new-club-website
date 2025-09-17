@@ -58,74 +58,40 @@ const officers = [
 	},
 ];
 
+
 export const EBoard = () => {
-	const [index, setIndex] = useState(0);
-	const [view, setView] = useState<number | null>(null);
+    const [active, setActive] = useState(0);
 
-	const nextSlide = () => {
-		if (index < officers.length - 3) setIndex(index + 3);
-	};
+    return (
+        <section id="e-board">
+        <h1 className="desktop-e-board-title">MEET OUR E-BOARD</h1>
 
-	const prevSlide = () => {
-		if (index > 0) setIndex(index - 3);
-	};
+        {/* Active member display */}
+        <div className="e-board-active">
+            <img
+            src={officers[active].img}
+            alt={officers[active].name}
+            className="e-board-active-img"
+            />
+            <div className="e-board-active-info">
+            <h2>{officers[active].name}</h2>
+            <h4>{officers[active].title}</h4>
+            <p>{officers[active].desc}</p>
+            </div>
+        </div>
 
-	return (
-		<section id="e-board">
-			<h1 className="desktop-e-board-title">MEET OUR E-BOARD</h1>
-			<div className="e-board-gallery-container">
-				<div className="e-board-gallery">
-					{officers.slice(index, index + 3).map((officer, i) => (
-						<div
-							key={i}
-							className="e-board-picture-wrapper"
-							onClick={() => setView(i)}
-							style={{ position: "relative" }}
-						>
-							<img
-								src={officer.img}
-								alt={officer.name}
-								className="e-board-picture"
-							/>
-							{view === i && officer.desc && (
-								<div className="e-board-tooltip">
-									<h2 className="officer-title">{officer.title}</h2>
-                                    <h4 className="officer-name">{officer.name}</h4>
-									<p>{officer.desc}</p>
-								</div>
-							)}
-						</div>
-					))}
-				</div>
-				<div className="e-board-gallery-controls-container">
-					<button
-						onClick={prevSlide}
-						className="e-board-gallery-button"
-						disabled={index === 0}
-					>
-						<img
-							src={"/src/assets/left arrow.svg"}
-							alt="left arrow"
-							className="e-board-gallery-controls"
-						/>
-					</button>
-					<button
-						onClick={nextSlide}
-						className="e-board-gallery-button"
-						disabled={index >= officers.length - 3}
-					>
-						<img
-							src={"/src/assets/right arrow.svg"}
-							alt="right arrow"
-							className="e-board-gallery-controls"
-						/>
-					</button>
-				</div>
-				<p className="e-board-gallery-counter">
-					{index + 1} –{" "}
-					{Math.min(index + 3, officers.length)} / {officers.length}
-				</p>
-			</div>
-		</section>
-	);
+        {/* Thumbnail row */}
+        <div className="e-board-thumbnails">
+            {officers.map((officer, i) => (
+            <img
+                key={i}
+                src={officer.img}
+                alt={officer.name}
+                className={`e-board-thumbnail ${active === i ? "active" : ""}`}
+                onClick={() => setActive(i)}
+            />
+            ))}
+        </div>
+        </section>
+    );
 };

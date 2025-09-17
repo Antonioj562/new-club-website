@@ -1,70 +1,80 @@
-/* Section container */
+ /* Section container */
 #e-board {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 80vh;
+    background: #444; 
+    color: white;
+    padding: 2rem;
 }
 
 /* Title */
 .desktop-e-board-title {
     font-size: 2.5rem;
     margin-bottom: 2rem;
+    font-weight: bold;
+    align-self: flex-start;
 }
 
-/* Gallery */
-.e-board-gallery-container {
+/* Active member display */
+.e-board-active {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.e-board-gallery {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 2rem;
+    margin-bottom: 2rem;
+    max-width: 800px;
+}
+
+.e-board-active-img {
+    width: 400px;
+    height: 500px;
+    border-radius: 15px;
+    object-fit: cover;
+    background: #ccc;
+}
+
+.e-board-active-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.2rem;
+}
+
+.e-board-active-info h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
     margin-bottom: 1rem;
 }
 
-.e-board-picture {
-    object-fit: cover;
-    width: 10rem;
-    height: 10rem;
-    border-radius: 10%;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+.e-board-active-info p {
+    font-size: 1rem;
+    line-height: 1.4;
 }
 
-.e-board-picture:hover {
+/* Thumbnail row */
+.e-board-thumbnails {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+}
+
+.e-board-thumbnail {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: all 0.3s ease;
+    background: #ccc;
+}
+
+.e-board-thumbnail:hover {
     transform: scale(1.1);
 }
 
-/* Controls */
-.e-board-gallery-controls-container {
-    display: flex;
-    gap: 2rem;
-    margin: 1rem 0;
-}
-
-.e-board-gallery-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-.e-board-gallery-controls {
-    width: 2.5rem;
-    height: 2.5rem;
-    transition: transform 0.25s ease-in-out;
-}
-
-.e-board-gallery-controls:hover {
+.e-board-thumbnail.active {
+    border-color: white;
     transform: scale(1.2);
-}
-
-/* Counter */
-.e-board-gallery-counter {
-    margin-top: 1rem;
-    font-size: 1rem;
 }

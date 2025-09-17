@@ -74,67 +74,7 @@ export const Home = () => {
                     </div>
                 </div>
             </section>
-            {/* Footer */}
-            <footer id='contact-us'>
-                <div className='footer-container'>
-                    <div className='logo-stuff'>
-                        <img className='comp-sci-logo' src={'/src/assets/logo_for_web_2_2025.png'} alt='CSS Logo' />
-                    </div>
-                    <div className='social-stuff'>
-                        <div className='email-container'>
-                            <ul>
-                                <li>REACH US AT OUR EMAIL</li>
-                                <li>css.cpp.edu@gmail.com</li>
-                            </ul>
-                        </div>
-                        <div className='css-socials'>
-                            <ul>
-                                <li>STAY IN THE LOOP</li>
-                                <li>
-                                    <a href='https://www.instagram.com/cppcss/' target='_blank' rel='noopener noreferrer'>
-                                        <img src={'/src/assets/instagram.svg'} alt='instagram' />
-                                    </a>
-                                    <a className='socials-link' href='https://www.instagram.com/cppcss/' target='_blank' rel='noopener noreferrer'>
-                                        cppcss
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href='https://www.facebook.com/groups/cppcss/' target='_blank' rel='noopener noreferrer'>
-                                        <img src={'/src/assets/facebook.svg'} alt='facebook' />
-                                    </a>
-                                    <a className='socials-link' href='https://www.facebook.com/groups/cppcss/' target='_blank' rel='noopener noreferrer'>
-                                        cppcss
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href='https://www.youtube.com/channel/UC8sXz4RNrixxpLXBI56_jGw' target='_blank' rel='noopener noreferrer'>
-                                        <img src={'/src/assets/youtube.svg'} alt='youtube' />
-                                    </a>
-                                    <a className='socials-link' href='https://www.youtube.com/channel/UC8sXz4RNrixxpLXBI56_jGw' target='_blank' rel='noopener noreferrer'>
-                                        Cal Poly Pomona - Computer Science Society
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href='https://github.com/cpp-css' target='_blank' rel='noopener noreferrer'>
-                                        <img src={'/src/assets/github.svg'} alt='github' />
-                                    </a>
-                                    <a className='socials-link' href='https://github.com/cpp-css' target='_blank' rel='noopener noreferrer'>
-                                        cpp-css
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div className='decoration-circle-container'>
-                    <div className='circle decoration-circle size-medium' id='footer-circle-1'></div>
-                    <div className='circle decoration-circle size-medium' id='footer-circle-2'></div>
-                    <div className='circle decoration-circle size-medium' id='footer-circle-3'></div>
-                    <div className='circle decoration-circle size-small' id='footer-circle-4'></div>
-                    <div className='circle decoration-circle size-small' id='footer-circle-5'></div>
-                    <div className='circle decoration-circle size-small' id='footer-circle-6'></div>
-                </div>
-            </footer>
+            
         </>
     )
 }

@@ -191,7 +191,7 @@
         color: white;
         border-bottom: none;
         background-color: #222222;
-        z-index: 2;                     /*higher z-index for the white lines under the project title */
+        z-index: 2;                     
         position: absolute;
         top: -1.4rem;
         left: 0rem;
