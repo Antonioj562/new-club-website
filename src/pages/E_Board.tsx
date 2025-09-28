@@ -6,8 +6,8 @@ import michaelImg from "../assets/michael.jpg";
 import brandonImg from "../assets/Brandon.png";
 import jadeImg from "../assets/Jade.jpeg";
 import julianImg from "../assets/Julian.jpg";
-import allisonImg from "../assets/Allison.JPG";
-import calebImg from "../assets/caleb.JPG";
+import allisonImg from "../assets/Allison.jpg";
+import calebImg from "../assets/caleb.jpg";
 import tonyImg from "../assets/tony.png";
 import antonioImg from "../assets/Antonio.jpeg";
 
