@@ -320,10 +320,6 @@
         top: 0;
     }
 
-    .projects-circle-border-container:first-of-type {
-        left: -1.4vw;
-    }
-
     #last {
         right: -1.4vw;
     }

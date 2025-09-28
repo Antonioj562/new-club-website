@@ -3,6 +3,12 @@ import { useState } from "react";
 import { CgClose } from "react-icons/cg";
 import '../styles/rootlayout.css'
 
+import logo2025 from "../assets/logo_for_web_2_2025.png";
+import instagramIcon from "../assets/instagram.svg";
+import facebookIcon from "../assets/facebook.svg";
+import youtubeIcon from "../assets/youtube.svg";
+import githubIcon from "../assets/github.svg";
+
 export default function Navbar(){
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -29,21 +35,23 @@ export default function Navbar(){
                 <CgClose className="main-navigation-menu-exit-icon" />
                 </div>
 
-                    <div className="main-navigation-menu-exit-line-4"></div>                <ul className="main-navbar">
+                <div className="main-navigation-menu-exit-line-4"></div>
+                { /* Navigation links  replace URL when github pages repo updated */}   
+                <ul className="main-navbar">
                     <li className="main-navbar-item">
-                        <Link className="main-navbar-link" to="/e-board" onClick={() => setIsMenuOpen(false)}>E-Board</Link>
+                        <Link className="main-navbar-link" to="/new-club-website/e-board" onClick={() => setIsMenuOpen(false)}>E-Board</Link>
                     </li>
                     <li className="main-navbar-item">
-                        <Link className="main-navbar-link" to="/events" onClick={() => setIsMenuOpen(false)}>Events</Link>
+                        <Link className="main-navbar-link" to="/new-club-website/events" onClick={() => setIsMenuOpen(false)}>Events</Link>
                     </li>
                     <li className="main-navbar-item">
-                        <Link className="main-navbar-link" to="/" onClick={() => setIsMenuOpen(false)}>Home</Link>
+                        <Link className="main-navbar-link" to="/new-club-website/" onClick={() => setIsMenuOpen(false)}>Home</Link>
                     </li>
                     <li className="main-navbar-item">
-                        <Link className="main-navbar-link" to="/projects" onClick={() => setIsMenuOpen(false)}>Projects</Link>
+                        <Link className="main-navbar-link" to="/new-club-website/projects" onClick={() => setIsMenuOpen(false)}>Projects</Link>
                     </li>
                     <li className="main-navbar-item">
-                        <Link className="main-navbar-link" to="/contact" onClick={() => setIsMenuOpen(false)}>Contact us</Link>
+                        <Link className="main-navbar-link" to="/new-club-website/contact" onClick={() => setIsMenuOpen(false)}>Contact us</Link>
                     </li>
                 </ul>
             </div>
@@ -53,7 +61,7 @@ export default function Navbar(){
             <footer id='contact-us'>
                 <div className='footer-container'>
                     <div className='logo-stuff'>
-                        <img className='comp-sci-logo' src={'/src/assets/logo_for_web_2_2025.png'} alt='CSS Logo' />
+                        <img className='comp-sci-logo' src={logo2025} alt='CSS Logo' />
                     </div>
                     <div className='social-stuff'>
                         <div className='email-container'>
@@ -67,7 +75,7 @@ export default function Navbar(){
                                 <li>STAY IN THE LOOP</li>
                                 <li>
                                     <a href='https://www.instagram.com/cppcss/' target='_blank' rel='noopener noreferrer'>
-                                        <img src={'/src/assets/instagram.svg'} alt='instagram' />
+                                        <img src={instagramIcon} alt='instagram' />
                                     </a>
                                     <a className='socials-link' href='https://www.instagram.com/cppcss/' target='_blank' rel='noopener noreferrer'>
                                         cppcss
@@ -75,7 +83,7 @@ export default function Navbar(){
                                 </li>
                                 <li>
                                     <a href='https://www.facebook.com/groups/cppcss/' target='_blank' rel='noopener noreferrer'>
-                                        <img src={'/src/assets/facebook.svg'} alt='facebook' />
+                                        <img src={facebookIcon} alt='facebook' />
                                     </a>
                                     <a className='socials-link' href='https://www.facebook.com/groups/cppcss/' target='_blank' rel='noopener noreferrer'>
                                         cppcss
@@ -83,7 +91,7 @@ export default function Navbar(){
                                 </li>
                                 <li>
                                     <a href='https://www.youtube.com/channel/UC8sXz4RNrixxpLXBI56_jGw' target='_blank' rel='noopener noreferrer'>
-                                        <img src={'/src/assets/youtube.svg'} alt='youtube' />
+                                        <img src={youtubeIcon} alt='youtube' />
                                     </a>
                                     <a className='socials-link' href='https://www.youtube.com/channel/UC8sXz4RNrixxpLXBI56_jGw' target='_blank' rel='noopener noreferrer'>
                                         Cal Poly Pomona - Computer Science Society
@@ -91,7 +99,7 @@ export default function Navbar(){
                                 </li>
                                 <li>
                                     <a href='https://github.com/cpp-css' target='_blank' rel='noopener noreferrer'>
-                                        <img src={'/src/assets/github.svg'} alt='github' />
+                                        <img src={githubIcon} alt='github' />
                                     </a>
                                     <a className='socials-link' href='https://github.com/cpp-css' target='_blank' rel='noopener noreferrer'>
                                         cpp-css
