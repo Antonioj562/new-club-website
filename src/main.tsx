@@ -11,17 +11,18 @@ import { Events } from "./pages/Events.tsx"
 import { Projects } from "./pages/Projects.tsx"
 import { Home } from "./pages/Home.tsx"
 
-const repoPath = '/new-club-website'; // Only needed when deployed to GitHub Pages match vite.config.ts base
+const repoBase = (import.meta.env.BASE_URL || '/').replace(/\/$/, ''); // '' or '/new-club-website'
+const routePrefix = repoBase === '' ? '' : repoBase; // use empty string for root
 
 const router = createBrowserRouter([
   {
     element: <Rootlayout />,
     children: [
-      { path: `${repoPath}/`, element: <Home /> },
-      { path: `${repoPath}/e-board`, element: <EBoard /> },
-      { path: `${repoPath}/events`, element: <Events /> },
-      { path: `${repoPath}/projects`, element: <Projects /> },
-      { path: `${repoPath}/contact`, element: <Contact /> },
+      { path: `${routePrefix}/`, element: <Home /> },
+      { path: `${routePrefix}/e-board`, element: <EBoard /> },
+      { path: `${routePrefix}/events`, element: <Events /> },
+      { path: `${routePrefix}/projects`, element: <Projects /> },
+      { path: `${routePrefix}/contact`, element: <Contact /> },
     ]
   }
 ]);
