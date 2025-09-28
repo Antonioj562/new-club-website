@@ -226,6 +226,7 @@ header::before {
         top: 5%;
         right: 2.55%;
         font-size: 5rem;
+        z-index: 2;
     }
 
     .about-title-text {

@@ -1,4 +1,4 @@
- /* Section container */
+/* Section container */
 #e-board {
     display: flex;
     flex-direction: column;
@@ -77,4 +77,80 @@
 .e-board-thumbnail.active {
     border-color: white;
     transform: scale(1.2);
+}
+
+@media only screen and (max-width: 768px) {
+    #e-board {
+        padding: 1rem;
+        min-height: 60vh;
+    }
+
+    .desktop-e-board-title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        align-self: center;
+    }
+
+    .e-board-active-img {
+        width: 140px;
+        height: 140px;
+        border-radius: 12px;
+        background: #ccc;
+    }
+
+    .e-board-gallery-container {
+        width: 100%;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .e-board-gallery {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .e-board-thumbnails {
+        width: 100%;
+        overflow-x: auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+        margin: 1.5rem 0 0 0;
+        padding-bottom: 1rem;
+        /* Prevent overlap */
+        position: relative;
+        z-index: 1;
+        background: transparent;
+    }
+
+    .e-board-thumbnail {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin: 0;
+        flex-shrink: 0;
+        border: 2px solid transparent;
+        background: #ccc;
+    }
+
+    .e-board-thumbnail.active {
+        border-color: #fff;
+        transform: scale(1.1);
+    }
+
+    .e-board-gallery-controls-container {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-top: 1rem;
+    }
+
+    .e-board-gallery-counter {
+        text-align: center;
+        margin-top: 1rem;
+        font-size: 1rem;
+    }
 }

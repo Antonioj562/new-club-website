@@ -279,18 +279,6 @@
         width: auto;
     }
 
-    /* partial borders of the project banner container */
-    .decoration-circle-container::before,
-    .decoration-circle-container::after {
-        content: '';
-        position: absolute;
-        display: block;
-        height: 35vh;
-        top: 0;
-        background-color: white;
-        width: 5px;
-        left: 0;
-    }
 
     .decoration-circle-container::after {
         width: 15vw;
