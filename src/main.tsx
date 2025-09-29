@@ -19,7 +19,7 @@ const router = createBrowserRouter([
       { path: "/e-board", element: <EBoard /> },
       { path: "/events", element: <Events /> },
       { path: "/projects", element: <Projects /> },
-      { path: "contact", element: <Contact /> },
+      { path: "/contact", element: <Contact /> },
     ]
   }],
   {
