@@ -39,19 +39,19 @@ export default function Navbar(){
                 { /* Navigation links  replace URL when github pages repo updated */}   
                 <ul className="main-navbar">
                     <li className="main-navbar-item">
-                        <Link className="main-navbar-link" to="/new-club-website/e-board" onClick={() => setIsMenuOpen(false)}>E-Board</Link>
+                        <Link className="main-navbar-link" to="/e-board" onClick={() => setIsMenuOpen(false)}>E-Board</Link>
                     </li>
                     <li className="main-navbar-item">
-                        <Link className="main-navbar-link" to="/new-club-website/events" onClick={() => setIsMenuOpen(false)}>Events</Link>
+                        <Link className="main-navbar-link" to="/events" onClick={() => setIsMenuOpen(false)}>Events</Link>
                     </li>
                     <li className="main-navbar-item">
-                        <Link className="main-navbar-link" to="/new-club-website/" onClick={() => setIsMenuOpen(false)}>Home</Link>
+                        <Link className="main-navbar-link" to="/" onClick={() => setIsMenuOpen(false)}>Home</Link>
                     </li>
                     <li className="main-navbar-item">
-                        <Link className="main-navbar-link" to="/new-club-website/projects" onClick={() => setIsMenuOpen(false)}>Projects</Link>
+                        <Link className="main-navbar-link" to="/projects" onClick={() => setIsMenuOpen(false)}>Projects</Link>
                     </li>
                     <li className="main-navbar-item">
-                        <Link className="main-navbar-link" to="/new-club-website/contact" onClick={() => setIsMenuOpen(false)}>Contact us</Link>
+                        <Link className="main-navbar-link" to="/contact" onClick={() => setIsMenuOpen(false)}>Contact us</Link>
                     </li>
                 </ul>
             </div>

@@ -11,21 +11,21 @@ import { Events } from "./pages/Events.tsx"
 import { Projects } from "./pages/Projects.tsx"
 import { Home } from "./pages/Home.tsx"
 
-const repoBase = (import.meta.env.BASE_URL || '/').replace(/\/$/, ''); // '' or '/new-club-website'
-const routePrefix = repoBase === '' ? '' : repoBase; // use empty string for root
-
 const router = createBrowserRouter([
   {
     element: <Rootlayout />,
     children: [
-      { path: `${routePrefix}/`, element: <Home /> },
-      { path: `${routePrefix}/e-board`, element: <EBoard /> },
-      { path: `${routePrefix}/events`, element: <Events /> },
-      { path: `${routePrefix}/projects`, element: <Projects /> },
-      { path: `${routePrefix}/contact`, element: <Contact /> },
+      { path: "/", element: <Home /> },
+      { path: "/e-board", element: <EBoard /> },
+      { path: "/events", element: <Events /> },
+      { path: "/projects", element: <Projects /> },
+      { path: "contact", element: <Contact /> },
     ]
+  }],
+  {
+    basename: "/new-club-website",
   }
-]);
+);
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
