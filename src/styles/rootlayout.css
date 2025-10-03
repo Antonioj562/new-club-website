@@ -120,13 +120,13 @@
 
     /* Footer styles */
     .footer-container {
-        margin-top: 3rem;
         display: flex;
         flex-flow:row nowrap;
         align-items: center;
         text-align: center;
         position: relative;
-        color: white
+        color: white;
+        z-index: 10;
     }
 
     .logo-stuff {

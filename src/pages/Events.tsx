@@ -1,5 +1,6 @@
 import "../styles/events.css";
 import { useState } from "react";
+import splatterBg from "../assets/Path75.png";
 
 export const Events = () => {
     const [active, setActive] = useState("BroncoHacks");
@@ -7,6 +8,7 @@ export const Events = () => {
     return (
         <div className="events-container">
             <section className="events-section">
+                <img src={splatterBg} alt="decorative line" className="events-decorative-bg" />
                 <div className="events-grid">
                     {/* Left: list */}
                     <div className="events-list">
