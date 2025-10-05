@@ -217,7 +217,7 @@ header::before {
 /* set different root font size for large resolutions */
 @media only screen and (min-width: 768px) {
     html {
-        font-size: 22px;
+        font-size: 20px;
     }
 
     /* About section rules */

@@ -54,6 +54,7 @@
 .events-item:hover {
     color: #aaa;
     transform: translateX(5px);
+    text-shadow: 2px 2px 3px #222222ff;
 }
 
 .events-item.active {
@@ -70,17 +71,30 @@
     justify-content: center;
 }
 
+
 .events-detail-title {
     font-size: 2rem;
     font-weight: 800;
     margin-bottom: 1rem;
     color: white;
+
+}
+
+.events-detail-title:hover{
+    color: #B9BEBEff;
+    border: 1px solid rgba(0,0,0,0);
+    transform: scale(1.02);
 }
 
 .events-detail-desc {
     font-size: 1rem;
     line-height: 1.6;
     color: #eaeaea;
+}
+.events-detail-desc:hover{
+    color: #B9BEBEff;
+    border: 1px solid rgba(0,0,0,0);
+    transform: scale(1.02);
 }
 
 /* Scrollbar styling (desktop only) */
