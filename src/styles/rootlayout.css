@@ -155,7 +155,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 3rem;
+        padding: 1.5rem;
     }
 
     .footer-container li {
@@ -225,8 +225,6 @@
         justify-content: center;
         align-items: center;
         gap: 1rem;
-        margin-top: 2rem;
-        padding-bottom: 2rem;
     }
 
     .circle.decoration-circle {
