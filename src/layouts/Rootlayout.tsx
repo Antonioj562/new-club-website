@@ -23,6 +23,7 @@ export default function Navbar(){
             >
                 <div className="hamburger-menu-line"></div>
                 <div className="hamburger-menu-line"></div>
+                <div className="hamburger-menu-line"></div>
             </div>
 
             {/* Navigation container */}
