@@ -1,0 +1,37 @@
+.contact-container{
+    display: flex;
+    background-color: #2a2a2a; 
+    width: 100%;
+    padding: 2rem 1rem; 
+    box-sizing: border-box;
+}
+.contact-title{
+    align-content: center;
+}
+.contact-forms{
+    align-content: center;
+}
+
+.contact-name contact-email contact-number contact-message{
+    
+}
+
+@media (max-width: 768px) {
+    .contact-container{
+        display: flex;
+        background-color: #2a2a2a; 
+        width: 100%;
+        padding: 2rem 1rem; 
+        box-sizing: border-box;
+    }
+    .contact-title{
+        align-content: center;
+    }
+    .contact-forms{
+        align-content: center;
+    }
+
+    .contact-name contact-email contact-number contact-message{
+    }
+
+}

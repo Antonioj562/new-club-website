@@ -56,6 +56,9 @@ header::before {
         max-width: 160px;
         width: 65%;
     }
+    #about{
+        max-height: 700px;
+    }
 }
 
 @keyframes fadeIn {
@@ -181,7 +184,7 @@ header::before {
 
 .about-computer {
     max-width: 20rem;
-    order: 3;
+    order: -1;
 }
 
 .about-desc-wrapper {
@@ -197,7 +200,7 @@ header::before {
 .about-computer {
     max-height: 25rem;
     position: relative;
-    left: -7%;
+    left: -40%;
     /* Start small */
     transform: scale(0.4);
     opacity: 0;
