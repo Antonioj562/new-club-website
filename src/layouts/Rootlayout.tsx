@@ -9,13 +9,23 @@ import facebookIcon from "../assets/facebook.svg";
 import youtubeIcon from "../assets/youtube.svg";
 import githubIcon from "../assets/github.svg";
 
+import { useEffect } from "react";
+
 export default function Navbar(){
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const onScroll = () => setIsScrolled(window.scrollY > 300);
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll(); // initialize on mount
+        return () => window.removeEventListener('scroll', onScroll);
+    }, []);
 
     return (
         <div className="root-layout-container">
         {/* Top horizontal navigation bar */}
-        <nav className="header">
+        <nav className={`header ${isScrolled ? 'scrolled' : ''}`} id="header">
             {/* Mobile hamburger menu */}
             <div
                 className="main-hamburger-menu-container"

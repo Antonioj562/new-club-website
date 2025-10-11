@@ -171,6 +171,7 @@ header::before {
     align-items: center;
     background-color: white;
     text-align: center;
+    height: 100vh;
 }
 
 .about-title {
@@ -197,16 +198,14 @@ header::before {
 }
 
     /* Left-side image with animation */
+@media only screen and (max-width: 768px) {
 .about-computer {
     max-height: 25rem;
     position: relative;
-    left: -40%;
-    /* Start small */
     transform: scale(0.4);
     opacity: 0;
     transition: transform 1s ease-out, opacity 1s ease-out;
 }
-
 
 /* When image is visible */
 .about-computer.visible {
@@ -214,7 +213,7 @@ header::before {
     opacity: 1;
 }
 
-
+}
 
 
 /* set different root font size for large resolutions */
@@ -274,7 +273,7 @@ header::before {
     .about-computer {
         max-height: 25rem;
         position: absolute;
-        top: 15%;
+        top: 25%;
         left: -5%;
 
         /* Start small */
@@ -296,6 +295,7 @@ header::before {
     position: relative;
     min-height: 100vh;
     padding: 2rem 0;
+    padding-top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -307,7 +307,7 @@ header::before {
     border-left: none;
     border-top: none;
     width: 100%;
-    padding-top: 4rem;
+    padding-top: 10rem;
     padding-bottom: 1rem;
     z-index: 2;
     }

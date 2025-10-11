@@ -19,7 +19,7 @@ export const Home = () => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("visible");
             } else {
-                entry.target.classList.remove("visible"); // optional (if you want it to reset)
+                entry.target.classList.remove("visible"); 
             }
             });
         },

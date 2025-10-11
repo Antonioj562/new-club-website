@@ -23,7 +23,7 @@ const router = createBrowserRouter([
     ]
   }],
   {
-    basename: "/new-club-website",
+    basename: "/",
   }
 );
 

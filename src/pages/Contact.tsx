@@ -8,10 +8,10 @@ export const Contact = () => {
                 <h3>ONLINE INQUIRY</h3>
             </div>
             <div className="contact-forms">
-                <input type="text" id="contact-name" name="Name" placeholder="Name"/>
-                <input type="text" id="contact-email" name="Email" placeholder="Email"/>
-                <input type="text" id="contact-number" name="Number" placeholder="Phone Number"/>
-                <input type="text" id="contact-message" name="Message" placeholder="Message"/>
+                <input type="text" className="contact-name" name="Name" placeholder="Name"/>
+                <input type="text" className="contact-email" name="Email" placeholder="Email"/>
+                <input type="text" className="contact-number" name="Number" placeholder="Phone Number"/>
+                <textarea className="contact-message" name="Message" placeholder="Message"/>
             </div>
         </section>
     ) 

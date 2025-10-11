@@ -54,7 +54,8 @@
 .events-item:hover {
     color: #aaa;
     transform: translateX(5px);
-    text-shadow: 2px 2px 3px #222222ff;
+    text-shadow: 1px 1px 2px #222222ff;
+
 }
 
 .events-item.active {
@@ -81,7 +82,7 @@
 }
 
 .events-detail-title:hover{
-    color: #B9BEBEff;
+    text-shadow: 1px 1px 2px #B9BEBEff;
     border: 1px solid rgba(0,0,0,0);
     transform: scale(1.02);
 }
@@ -92,7 +93,7 @@
     color: #eaeaea;
 }
 .events-detail-desc:hover{
-    color: #B9BEBEff;
+    text-shadow: 1px 1px 2px #B9BEBEff;
     border: 1px solid rgba(0,0,0,0);
     transform: scale(1.02);
 }
